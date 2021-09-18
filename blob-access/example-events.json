@@ -1,0 +1,74 @@
+[
+    {
+        "formTemplateCreate": {
+            "eventOid": "uuid4",
+            "module": "formEditor",
+            "event": "create",
+            "eventType": "formTemplateCreate",
+            "data": {
+                "name": "str",
+                "formTemplateOid": "uuid4",
+                "classification": "str"
+            }
+        }
+    },
+    {
+        "formTemplateEdit": {
+            "eventOid": "uuid4",
+            "module": "formEditor",
+            "event": "update",
+            "eventType": "formTemplateEdit",
+            "data": {
+                "formTemplateOid": "uuid4",
+                "formBuilder": {
+                    "display": "form",
+                    "components": [
+                        {
+                            "key": "uniqueStr",
+                            "label": "str",
+                            "type": "checkbox"
+                        },
+                        {
+                            "key": "uniqueStr",
+                            "label": "str",
+                            "type": "select",
+                            "dataSrc": "locations"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "formSubmit": {
+            "eventOid": "uuid4",
+            "module": "form",
+            "event": "submit",
+            "eventType": "formSubmit",
+            "data": {
+                "formTemplateOid": "uuid4",
+                "formSubmitOid": "uuid4",
+                "state": "draft",
+                "formData": {
+                    "key0": "value",
+                    "key1": "value"
+                }
+            }
+        }
+    },
+    {
+        "attachmentUpload": {
+            "eventOid": "uuid4",
+            "module": "form",
+            "event": "attachment",
+            "eventType": "attachmentUpload",
+            "data": {
+                "attachmentType": "attachment",
+                "fileName": "str",
+                "fileSize": 1234,
+                "attachmentOid": "uuid4",
+                "formSubmitOid": "uuid4"
+            }
+        }
+    }
+]
